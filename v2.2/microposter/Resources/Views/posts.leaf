@@ -1,0 +1,8 @@
+#set("body") {
+    <ul>
+        #for(post in posts) {
+            <li>#(post)</li>
+        }
+    </ul>
+}
+#embed("base")
