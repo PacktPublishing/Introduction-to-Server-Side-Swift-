@@ -1,0 +1,9 @@
+#set("body") {
+    <ul>
+        #for(post in posts) {
+            <li>#(post)</li>
+        }
+    </ul>
+    <a class="btn btn-light" href="/posts/new" role="button">Create new post</a>
+}
+#embed("base")
