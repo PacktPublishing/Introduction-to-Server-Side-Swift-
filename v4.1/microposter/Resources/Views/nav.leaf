@@ -1,0 +1,4 @@
+<nav class="nav">
+    <a class="nav-link active" href="/posts">All Posts</a>
+    <a class="nav-link" href="/post/new">New Post</a>
+</nav>
