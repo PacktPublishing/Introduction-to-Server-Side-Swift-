@@ -2,6 +2,7 @@ import FluentMySQL
 import Vapor
 import Leaf
 import Authentication
+import FluentMySQL
 
 /// Called before your application initializes.
 ///
@@ -25,7 +26,7 @@ public func configure(
 
     // Register middleware
     var middlewares = MiddlewareConfig() // Create _empty_ middleware config
-    // middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
+    middlewares.use(FileMiddleware.self) // Serves files from `Public/` directory
     middlewares.use(DateMiddleware.self) // Adds `Date` header to responses
     middlewares.use(ErrorMiddleware.self) // Catches errors and converts to HTTP response
     services.register(middlewares)
@@ -36,7 +37,19 @@ public func configure(
     
     // Configure a SQLite database
     var databases = DatabaseConfig()
-    let db = MySQLDatabase(hostname: "localhost", user: "micro", password: "micro", database: "micropostr")
+    let db :MySQLDatabase
+    
+    if env.isRelease {
+//        let dbUrl = Environment.get("JAWSDB_URL")
+//
+//        db = MySQLDatabase(databaseURL: dbUrl!)!
+        let config = MySQLDatabaseConfig(hostname: "localhost", port: 3306, username: "micro", password: "micro", database: "microposter")
+        db = MySQLDatabase(config: config)
+    
+    } else {
+        let config = MySQLDatabaseConfig(hostname: "localhost", port: 3306, username: "micro", password: "micro", database: "microposter")
+        db = MySQLDatabase(config: config)
+    }
     try databases.add(database: db, as: .mysql)
     services.register(databases)
 
