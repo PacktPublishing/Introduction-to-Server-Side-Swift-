@@ -23,12 +23,11 @@ To fully benefit from the coverage included in this course, you will need:<br/>
 This video is for Swift developers keen to create both web and mobile applications. Some understanding of web standards such as HTML, CSS, and JavaScript will be an advantage.
 ### Technical Requirements
 This course has the following software requirements:<br/>
-This course has been tested on the following system configuration:
-● OS: MacOS High Sierra
-● Processor: 2.6 GHz Intel Core i5
-● Memory: 16GB
-● Hard Disk Space: 250 gb
-● Video Card: Intel Iris 1536 MB
+<LI>OS: MacOS High Sierra
+<LI>Processor: 2.6 GHz Intel Core i5
+<LI>Memory: 16GB
+<LI>Hard Disk Space: 250 gb
+<LI>Video Card: Intel Iris 1536 MB</LI>
 
 
 ## Related Products
