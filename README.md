@@ -19,7 +19,7 @@ Further into the course, you'll be adding authentication by creating a Sign Up F
 
 ## Instructions and Navigation
 ### Assumed Knowledge
-To fully benefit from the coverage included in this course, you will need:<br/>
+
 This video is for Swift developers keen to create both web and mobile applications. Some understanding of web standards such as HTML, CSS, and JavaScript will be an advantage.
 ### Technical Requirements
 This course has the following software requirements:<br/>
